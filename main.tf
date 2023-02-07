@@ -10,7 +10,7 @@ resource "random_password" "password" {
 
 resource "rabbitmq_user" "user" {
   name     = var.name
-  password = random_password.user_password.password.result
+  password = random_password.password.result
   tags     = var.tags
 }
 
