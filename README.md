@@ -1,0 +1,1 @@
+# RabbitMQ user terraform module
