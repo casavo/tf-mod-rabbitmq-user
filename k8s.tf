@@ -10,7 +10,8 @@ resource "kubernetes_secret" "secret" {
   }
 
   data = {
-    RABBITMQ_USER     = var.name
-    RABBITMQ_PASSWORD = random_password.password.result
+    RABBITMQ_USER              = var.name
+    RABBITMQ_PASSWORD          = random_password.password.result
+    RABBITMQ_CONNECTION_STRING = var.rabbitmq_protocol + "://" + var.name + ":" + var.password + "@" + var.kubernetes.rabbitmq_host + ":" + var.rabbitmq_port
   }
 }
