@@ -2,11 +2,11 @@ terraform {
   required_providers {
     kubernetes = {
       source  = "hashicorp/kubernetes"
-      version = ">= 2.7.0"
+      version = ">= 3.0.1"
     }
     rabbitmq = {
       source  = "cyrilgdn/rabbitmq"
-      version = "~> 1.7.0"
+      version = "~> 1.10.1"
     }
     random = {
       source = "hashicorp/random"
