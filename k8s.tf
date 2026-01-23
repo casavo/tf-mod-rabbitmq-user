@@ -1,4 +1,4 @@
-resource "kubernetes_secret" "secret" {
+resource "kubernetes_secret_v1" "secret" {
   count = var.kubernetes_secret.enabled ? 1 : 0
 
   metadata {
